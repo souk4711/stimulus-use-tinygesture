@@ -1,1 +1,1 @@
-export { useTinyGesture } from './use-tinygesture'
+export * from './use-tinygesture'
