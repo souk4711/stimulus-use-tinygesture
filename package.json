@@ -35,6 +35,8 @@
     "dev": "rollup -wc",
     "test": "yarn build && karma start",
     "test:watch": "yarn test --auto-watch --no-single-run",
+    "prerelease": "yarn build && git --no-pager diff && echo && npm pack --dry-run",
+    "release": "npm publish",
     "clean": "rimraf ./dist"
   },
   "dependencies": {
