@@ -7,10 +7,10 @@ module.exports = function (config) {
 
     // frameworks to use
     // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
-    frameworks: ['mocha', 'webpack'],
+    frameworks: ['webpack', 'mocha', 'fixture'],
 
     // list of files / patterns to load in the browser
-    files: [{ pattern: 'dist/index.js', included: false }, 'spec/**/*.js'],
+    files: ['spec/**/*.js'],
 
     // list of files / patterns to exclude
     exclude: [],

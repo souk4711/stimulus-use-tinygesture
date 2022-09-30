@@ -5,7 +5,8 @@
   "keywords": [
     "typescript",
     "stimulus",
-    "stimulus-use"
+    "stimulus-use",
+    "gesture"
   ],
   "author": "John Doe <johndoe@example.com>",
   "license": "MIT",
@@ -58,6 +59,7 @@
     "husky": "^8.0.1",
     "karma": "^6.4.1",
     "karma-chrome-launcher": "^3.1.1",
+    "karma-fixture": "^0.2.6",
     "karma-mocha": "^2.0.1",
     "karma-webpack": "^5.0.0",
     "mocha": "^10.0.0",
