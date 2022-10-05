@@ -13,12 +13,12 @@ class TappableController extends Controller {
   connect() {
     useTinyGesture(this, {
       handlers: {
-        tap: [this.handleTapEvent]
+        tap: [this.tapHandler]
       }
     })
   }
 
-  handleTapEvent(_, gesture) {
+  tapHandler(_, gesture) {
     this.lastGesture = gesture
   }
 }
@@ -47,7 +47,7 @@ describe('useTinyGesture', () => {
     await nextFrame()
   })
 
-  it('#handleTapEvent', async () => {
+  it('#tapHandler', async () => {
     mouseDown(TappableController.id, { screenX: 1, screenY: 1 })
     mouseUp(TappableController.id, {})
 

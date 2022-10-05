@@ -7,13 +7,13 @@ Tracks the user's gesture on an element using the [TinyGesture] library.
 ### Using npm
 
 ```sh
-npm install stimulus-use-tinygesture @hotwired/stimulus
+npm i stimulus-use-tinygesture
 ```
 
 ### Using yarn
 
 ```sh
-yarn add stimulus-use-tinygesture @hotwired/stimulus
+yarn add stimulus-use-tinygesture
 ```
 
 ## Reference
@@ -54,12 +54,12 @@ class TappableController extends Controller {
         // swipeleft
         // swiperight
         // ...
-        tap: [this.handleTapEvent]
+        tap: [this.tapHandler]
       }
     })
   }
 
-  handleTapEvent(event, gesture) {
+  tapHandler(event, gesture) {
     console.log(event)
     console.log(gesture)
   }
