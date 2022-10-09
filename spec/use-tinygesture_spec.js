@@ -26,30 +26,23 @@ class TappableController extends Controller {
 describe('useTinyGesture', () => {
   let application
 
-  before('application#start', async () => {
+  before(() => {
     application = Application.start()
     application.register(TappableController.name, TappableController)
-    await nextFrame()
   })
 
-  after('application#stop', async () => {
-    await application.stop()
-    await nextFrame()
+  after(() => {
+    application.stop()
   })
 
-  beforeEach('controller#connect', async () => {
+  beforeEach(async () => {
     fixture.set(TappableController.HTML)
     await nextFrame()
   })
 
-  afterEach('controller#disconnect', async () => {
-    fixture.cleanup()
-    await nextFrame()
-  })
-
   it('#tapHandler', async () => {
-    mouseDown(TappableController.id, { screenX: 1, screenY: 1 })
-    mouseUp(TappableController.id, {})
+    await mouseDown(TappableController.id, { screenX: 1, screenY: 1 })
+    await mouseUp(TappableController.id, {})
 
     const controller = findController(
       application,
